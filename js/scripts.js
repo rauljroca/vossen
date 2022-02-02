@@ -3,77 +3,6 @@
     "use strict";
     
     /* -------------------
-    Revolution Sliders
-    ---------------------*/
-    $('.tp-banner').show().revolution({
-        delay: 16000,
-        startwidth: 1170,
-        startheight: 700,
-        hideThumbs: 200,
-        dottedOverlay: "none",
-		hideTimerBar: "on",
-        thumbWidth: 100,
-        thumbHeight: 50,
-        thumbAmount: 5,
-        navigationType: "none",
-        navigationArrows: "solo",
-        navigationStyle: "preview4",
-        touchenabled: "on",
-        swipe_velocity: 0.7,
-        swipe_min_touches: 1,
-        swipe_max_touches: 1,
-        drag_block_vertical: false,
-        keyboardNavigation: "off",
-        navigationHAlign: "center",
-        navigationVAlign: "bottom",
-        navigationVOffset: 20,
-        soloArrowLeftHalign: "left",
-        soloArrowLeftValign: "center",
-        soloArrowLeftHOffset: 20,
-        soloArrowRightHalign: "right",
-        soloArrowRightValign: "center",
-        soloArrowRightHOffset: 20,
-        fullWidth: "off",
-        fullScreen: "on",
-        spinner: "spinner1",
-        stopLoop: "off",
-        stopAfterLoops: -1,
-        stopAtSlide: -1,
-        shuffle: "off",
-        autoHeight: "off",
-        forceFullWidth: "off",
-        hideThumbsOnMobile: "off",
-        hideNavDelayOnMobile: 1500,
-        hideBulletsOnMobile: "off",
-        hideArrowsOnMobile: "off"
-    });
-    $('.tp-banner-video').show().revolution({
-        dottedOverlay: "none",
-        delay: 9000,
-        startheight: 700,
-        hideTimerBar: "on",
-        navigationType: "none",
-		navigationStyle: "preview4",
-		touchenabled: "on",
-		swipe_velocity: 0.7,
-		swipe_min_touches: 1,
-		swipe_max_touches: 1,
-		drag_block_vertical: false,
-		keyboardNavigation: "on",
-		fullScreen: "on",
-		spinner: "spinner1",
-		stopLoop: "off",
-		stopAfterLoops: -1,
-		stopAtSlide: -1,
-		forceFullWidth: "off",
-		fullScreenAlignForce: "off",
-		minFullScreenHeight: "400",
-		hideThumbsOnMobile: "off",
-		hideNavDelayOnMobile: 1500,
-        hideBulletsOnMobile: "off",
-		hideArrowsOnMobile: "off"
-    });
-    /* -------------------
     Owl Slider callings
     ---------------------*/
     $("#quote-slider").owlCarousel({
@@ -87,22 +16,6 @@
         singleItem : true,
         pagination: true,
         navigation: false
-    });
-    // AJAX project slider
-    $(document).ajaxComplete(function(){
-        $("#project-slider").owlCarousel({
-            autoPlay : true,
-            singleItem : true,
-            pagination: true,
-            navigation: false,
-        });
-    });
-    $("#owl-slider").owlCarousel({
-        autoPlay : true,
-        singleItem : true,
-        pagination: true,
-        navigation: false,
-        navigationText : ['<i class="icon ion-chevron-left"></i>','<i class="icon ion-chevron-right"></i>'],
     });
     /* -------------------
     Parallax Sections
@@ -127,7 +40,7 @@
     }
     /* -------------------
     Google map
-    ---------------------*/
+    ---------------------
     $("#map").gmap3({
         marker:{     
         address:"44 W 66th St, New York, NY", 
@@ -141,17 +54,17 @@
         scrollwheel:false,
         draggable: true }
         }
-    });	
+    });	*/
     /* -------------------
     Twitter Feed
-    ---------------------*/
+    ---------------------
     $('.tweet').twittie({
         username: 'VossenDesign',
         dateFormat: '%b. %d, %Y',
         template: '{{tweet}} <div class="date">{{date}}</div>',
         count: 2,
         hideReplies: true
-    }); 
+    }); */
     /* -------------------
     Animated progress bars
     ---------------------*/
@@ -173,13 +86,13 @@
     });
     /* -------------------
     Video section lightbox
-    ---------------------*/
+    ---------------------
     $('#video-lightbox').cubeportfolio({
         gridAdjustment: 'alignCenter',
         lightboxDelegate: '.cbp-lightbox',
         lightboxGallery: true,
         lightboxShowCounter: false
-    });
+    });*/
     /* -------------------
     Scroll functions
     ---------------------*/
@@ -301,44 +214,8 @@
 		return false;
 	});
     /* -------------------
-    Subscribe form
-    ---------------------*/
-    $( document ).on( 'ready', function() {
-        $( '#subscribe-form' ).on( 'submit', function( e ) {
-            e.preventDefault();
-            var $el = $( this ),
-                $alert = $el.find( '.form-validation' ),
-                $submit = $el.find( 'button' ),
-                action = $el.attr( 'action' );
-            $submit.button( 'loading' );
-            $alert.removeClass( 'alert-danger alert-success' );
-            $alert.html( '' );
-            $.ajax({
-                type     : 'POST',
-                url      : action,
-                data     : $el.serialize() + '&ajax=1',
-                dataType : 'JSON',
-                success  : function( response ) {
-                    if ( response.status == 'error' ) {
-                        $alert.html( response.message );
-                        $alert.addClass( 'alert-danger' ).fadeIn( 500 );
-                    } 
-                    else {
-                        $el.trigger( 'reset' );
-                        $alert.html( response.message );
-                        $alert.addClass( 'alert-success' ).fadeIn( 500 );
-                    }
-                    $submit.button( 'reset' );
-                },
-            })
-        });
-    });
-    /* -------------------
     Bootstrap Tooltip, Alert, Tabs
     ---------------------*/
-    $(function () { $("[data-toggle='tooltip']").tooltip();  
-        $(".alert").alert()
-    });
     $(function () {
         var active = true;
         $('#collapse-init').click(function () {

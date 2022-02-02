@@ -198,8 +198,7 @@ p {
     position: absolute;
     top: 50%;
     left: 50%; 
-    margin-top: -25px;
-    margin-left: -60px;
+	transform: translate(-50%,-50%);
 }
 
 /*----- Typography -----*/
@@ -255,28 +254,28 @@ p {
     background-image: url(../img/backgrounds/bg-home-fullscreen.jpg);
 }
 .parallax-section-1 {
-    background-image: url(../img/backgrounds/bg-1.jpg);
+	background-image: url(../img/backgrounds/bg-3.jpg);
 }
 .parallax-section-2 {
-    background-image: url(../img/backgrounds/bg-2.jpg);
+	background-image: url(../img/backgrounds/bg-3.jpg);
 }
 .parallax-section-3 {
     background-image: url(../img/backgrounds/bg-3.jpg);
 }
 .parallax-section-4 {
-    background-image: url(../img/backgrounds/bg-4.jpg);
+	background-image: url(../img/backgrounds/bg-3.jpg);
 }
 .parallax-section-5 {
-    background-image: url(../img/backgrounds/bg-5.jpg);
+	background-image: url(../img/backgrounds/bg-3.jpg);
 }
 .parallax-section-6 {
-    background-image: url(../img/backgrounds/bg-6.jpg);
+	background-image: url(../img/backgrounds/bg-3.jpg);
 }
 .parallax-section-7 {
-    background-image: url(../img/backgrounds/bg-7.jpg);
+	background-image: url(../img/backgrounds/bg-3.jpg);
 } 
 .parallax-section-8 {
-    background-image: url(../img/backgrounds/bg-8.jpg);
+	background-image: url(../img/backgrounds/bg-3.jpg);
 }
 
 /*----- Home Sections -----*/
@@ -1067,12 +1066,14 @@ nav {
 
 /*----- Features -----*/
 #features {
-    padding-top: 90px;
-    padding-bottom: 80px;
+    padding-top: 140px;
+    padding-bottom: 20px;
 }
+#aboutB { padding-bottom: 100px; padding-top: 40px; }
+#aboutC { padding-bottom: 120px; }
 @media (min-width: 992px) {
     .features-row {
-        margin-bottom: 70px;
+        margin-bottom: 120px;
         text-align: left
     }
     .feature-column {
@@ -1370,8 +1371,6 @@ nav {
 #fun-facts {
 	display: table;
 	width: 100%;
-	height: 100%;
-	min-height: 100%;
 	z-index: 1;  
 } 
 .fact-container {
@@ -1379,7 +1378,7 @@ nav {
 	padding-bottom:30px;
 }
 .fact h2 {
-    font-size: 65px;
+    font-size: 45px;
     letter-spacing: 0px;
     margin: 0;
     line-height: 65px; 
@@ -1394,7 +1393,7 @@ nav {
 }
 .counter {
     font-family: 'Montserrat', sans-serif;
-    font-size: 65px;
+    font-size: 45px;
     font-weight: 700;
     letter-spacing: 0px;
     margin: 0;
@@ -2022,8 +2021,8 @@ blockquote strong {
     display:block;
     margin:auto;
 }
-.clients .client .logo-dark, 
-.clients .client a .logo-dark {
+.clients .client .aplo.svg, 
+.clients .client a .aplo.svg {
       background: #f9f9f9;
       position: relative;
       z-index: 2;
@@ -2047,8 +2046,8 @@ blockquote strong {
       top: 0;
       left: 0; 
 }
-.clients .client:hover .logo-dark, 
-.clients .client a:hover .logo-dark {
+.clients .client:hover .aplo.svg, 
+.clients .client a:hover .aplo.svg {
       opacity: 0;
       -moz-opacity: 0;
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -2117,9 +2116,7 @@ blockquote strong {
 	padding-bottom: 80px;
 }
 #contact .section-title {
-    font-size: 55px;
     text-transform: uppercase;
-    line-height: 55px;
     margin: 0 auto 31px;
     text-align: center;
 }
@@ -2176,6 +2173,7 @@ textarea {
 }
 
 #contact input.submit { 
+margin: 30px;
     width: auto!important;
 	font-family: 'Montserrat', sans-serif;
     font-size: 14px;
@@ -2281,7 +2279,7 @@ border-bottom:1px dotted #ccc;
 /*----- Video Popup Section -----*/
 #video-section {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
 }
 #video-section .row {
     margin-top: 90px;
