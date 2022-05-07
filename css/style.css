@@ -1493,6 +1493,7 @@ blockquote strong {
     padding-top: 60px;
     padding-bottom: 100px;
 }
+#portfolio .img > img { filter: grayscale(1); }
 .cbp-l-filters-alignRight .cbp-filter-item,
 .cbp-l-filters-alignCenter .cbp-filter-item {
     background-color: #f6f7f7;
